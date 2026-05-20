@@ -25,8 +25,6 @@ namespace Podgotovka.Pages
             InitializeComponent();
             ProductList.ItemsSource = Core.Context.Product.ToList();
 
-
-
             var AllProviders = Core.Context.Provider.ToList();
             AllProviders.Insert(0, new Provider { Name = "Все поставщики" });
             FilterCmb.ItemsSource = AllProviders;
@@ -102,7 +100,7 @@ namespace Podgotovka.Pages
         {
             if (ProductList.SelectedItem is Product selectedProduct)
             {
-                NavigationService.Navigate(new AddEditProductPage());
+                NavigationService.Navigate(new AddEditProductPage(selectedProduct));
             }
         }
 
