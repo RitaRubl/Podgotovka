@@ -50,6 +50,7 @@ namespace Podgotovka.Pages
             Core.CurrentUser = user;
             MessageBox.Show("Успешный вход!");
             NavigationService.Navigate(new ProductPage());
+            (MainWindow.GetWindow(this) as MainWindow)?.UpdateInfo();
 
         }
 

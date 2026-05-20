@@ -17,6 +17,7 @@
             <Image Source="/Res/Icon.png" Margin="5" HorizontalAlignment="Left"/>
             <TextBlock Text="Магазин обуви" Margin="56,14,-46,-4" FontSize="20"/>
             <TextBlock Name="CurrentPage" Text="" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Name="UserOn" Text ="Гость" HorizontalAlignment="Right" Margin="0,18,50,-18"/>
             <Button Name="BackButton" Content="Назад" Margin="5" HorizontalAlignment="Right" Click="BackButton_Click"/>
         </Grid>
 

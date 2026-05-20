@@ -25,6 +25,9 @@ namespace Podgotovka
             InitializeComponent();
 
             MainFrame.Navigate(new Pages.AuthPage());
+
+
+            
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -32,6 +35,22 @@ namespace Podgotovka
             if (MainFrame.CanGoBack)
             {
                 MainFrame.GoBack();
+            }
+        }
+
+        public void UpdateInfo()
+        {
+            if (Core.CurrentUser != null)
+            {
+                UserOn.Text =
+                    $"{Core.CurrentUser.Surname} " +
+                    $"{Core.CurrentUser.Name} " +
+                    $"{Core.CurrentUser.Patronymic}";
+            }
+
+            else
+            {
+                UserOn.Text = "Гость";
             }
         }
     }

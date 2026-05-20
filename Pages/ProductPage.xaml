@@ -41,7 +41,7 @@
             </ComboBox>
         </StackPanel>
 
-        <ListBox Name="ProductList" Grid.Row="1" HorizontalContentAlignment="Stretch" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListBox Name="ProductList" Grid.Row="1" HorizontalContentAlignment="Stretch" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="ProductList_MouseDoubleClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -109,7 +109,6 @@
         <StackPanel x:Name="ButtonsFullPanel" Grid.Row="2">
             <StackPanel x:Name="EditButtonsPanel">
                 <Button x:Name="AddProductButton" Content="Добавить" Click="AddProductButton_Click"/>
-                <Button x:Name="EditProductButton" Content="Редактировать" Click="EditProductButton_Click"/>
                 <Button x:Name="DeleteProductButton" Content="Удалить" Click="DeleteProductButton_Click"/>
             </StackPanel>
             <Button x:Name="OrdersButton" 
